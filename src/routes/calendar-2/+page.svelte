@@ -5,7 +5,7 @@
   import '@mobiscroll/javascript/dist/css/mobiscroll.min.css';
 
   onMount(() => {
-    const inst = eventcalendar('#demo-desktop-week-view', {
+    const inst = eventcalendar('#calendar-2', {
       theme: 'ios',
       themeVariant: 'light',
       clickToCreate: true,
@@ -33,4 +33,4 @@
   });
 </script>
 
-<div id="demo-desktop-week-view"></div>
+<div id="calendar-2"></div>
