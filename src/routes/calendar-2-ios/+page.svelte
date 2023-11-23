@@ -1,11 +1,14 @@
 <script lang="ts">
   import { eventcalendar, toast, util } from '@mobiscroll/javascript';
-  import { onMount } from 'svelte';
+  import {onDestroy, onMount} from 'svelte';
 
   import '@mobiscroll/javascript/dist/css/mobiscroll.min.css';
+  import {browser} from "$app/environment";
 
+  let eventCalendarInstance;
   onMount(() => {
-    const inst = eventcalendar('#calendar-2', {
+    console.log("Component mounted")
+    eventCalendarInstance = eventcalendar('#calendar-2', {
       theme: 'ios',
       themeVariant: 'light',
       clickToCreate: true,
@@ -26,10 +29,17 @@
     util.http.getJson(
         'https://trial.mobiscroll.com/events/?vers=5',
         function (events) {
-          inst.setEvents(events);
+          eventCalendarInstance.setEvents(events);
         },
         'jsonp',
     );
+  });
+
+  onDestroy( () => {
+    if (browser) {
+      console.log("Component removed")
+      eventCalendarInstance.destroy()
+    }
   });
 </script>
 
