@@ -2,6 +2,8 @@
   import { eventcalendar, toast, util } from '@mobiscroll/javascript';
   import { onMount } from 'svelte';
 
+  import '@mobiscroll/javascript/dist/css/mobiscroll.min.css';
+
   onMount(() => {
     const inst = eventcalendar('#demo-desktop-week-view', {
       theme: 'ios',
