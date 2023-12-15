@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { eventcalendar, toast, util } from '@mobiscroll/javascript';
-  import {onDestroy, onMount} from 'svelte';
+  import pkg from '@mobiscroll/javascript';
+  const {eventcalendar, toast, util} = pkg;
+  import { onDestroy, onMount } from 'svelte';
 
   import '@mobiscroll/javascript/dist/css/mobiscroll.min.css';
   import {browser} from "$app/environment";
