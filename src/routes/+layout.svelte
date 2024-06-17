@@ -1,13 +1,13 @@
 <script>
-    import { goto } from '$app/navigation';
+  import { goto } from '$app/navigation';
 
-    function navigateToCalendarOne() {
-        goto('/calendar-1-material');
-    }
+  function navigateToCalendarOne() {
+    goto('/calendar-1-material');
+  }
 
-    function navigateToCalendarTwo() {
-        goto('/calendar-2-ios');
-    }
+  function navigateToCalendarTwo() {
+    goto('/calendar-2-ios');
+  }
 </script>
 
 Switch between calendar views
